@@ -6,13 +6,10 @@
 //  TODO Доповни код функції так, щоб вона повертала число —загальну ширину елемента. При розрахунку загальної ширини орієнтуйся на те, що значення box-sizing дорівнює border-box.
 
 function getElementWidth(content, padding, border) {
-  const width =
-    Number(content.slice(0, -2)) +
-    2 * Number(padding.slice(0, -2)) +
-    2 * Number(border.slice(0, -2));
+  const width = content + 2 * padding + 2 * border;
   return width;
 }
 
-console.log(getElementWidth("50px", "8px", "4px")); // 74
-console.log(getElementWidth("60px", "12px", "8.5px")); // 101
-console.log(getElementWidth("200px", "0px", "0px")); // 200
+console.log(getElementWidth(50, 8, 4)); // 74
+console.log(getElementWidth(60, 12, 8.5)); // 101
+console.log(getElementWidth(200, 0, 0)); // 200
